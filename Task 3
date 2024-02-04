@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 5px;
+            border: 1px solid #61dafb;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid #61dafb;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Temperature Converter</h1>
+
+    <label for="celsius">Celsius:</label>
+    <input type="number" id="celsius" placeholder="Enter temperature in Celsius" oninput="convertTemperature()">
+
+    <label for="fahrenheit">Fahrenheit:</label>
+    <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit" oninput="convertTemperature()">
+
+    <script>
+        function convertTemperature() {
+            var celsiusInput = document.getElementById("celsius");
+            var fahrenheitInput = document.getElementById("fahrenheit");
+
+            var celsiusValue = parseFloat(celsiusInput.value);
+            var fahrenheitValue = parseFloat(fahrenheitInput.value);
+
+            if (!isNaN(celsiusValue)) {
+                fahrenheitInput.value = (celsiusValue * 9/5) + 32;
+            } else if (!isNaN(fahrenheitValue)) {
+                celsiusInput.value = (fahrenheitValue - 32) * 5/9;
+            }
+        }
+    </script>
+
+</body>
+</html>
