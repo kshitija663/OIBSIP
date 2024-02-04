@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        h1, p {
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Security Check</h1>
+        <p>Our systems have detected unusual activity from your computer network. This page checks to see if it's really you sending the requests, and not a robot. Why did this happen?</p>
+        <p>If you believe this is a mistake, please ensure your system is free from malware, disable any VPN or proxy, and try again. If the issue persists, contact our support team.</p>
+    </div>
+</body>
+
+</html>
